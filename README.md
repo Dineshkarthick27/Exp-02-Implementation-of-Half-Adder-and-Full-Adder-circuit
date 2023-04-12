@@ -34,21 +34,76 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
+
 ### 
+```
 Program:
-/*
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+/*Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+
+Developed by:D.Dhanumalya 
+RegisterNumber:212222230030
+
+# Half Adder
+module halfadd(A,B,C,S);
+input A,B;
+output S,C;
+xor(S,A,B);
+and(C,A,B);
+endmodule
+
+# Full Adder
+module fulladd(a,b,ci,s,co);
+input a,b,ci;
+output s,co;
+wire d,e,f;
+xor(d,a,b);
+xor(s,d,ci);
+and(e,ci,d);
+and(f,a,b);
+or(co,e,f);
+endmodule
+```
+
 Logic symbol & Truthtable
 RTL realization
 
 ### Output:
+# Half Adder:
+
+![image](https://user-images.githubusercontent.com/120552008/231431134-70039bc2-ab55-418c-b06b-efbde1b23950.png)
+
+# Full Adder:
+
+![image](https://user-images.githubusercontent.com/120552008/231431251-6f6f15b2-c0f4-4c99-98b0-0e651652f1dc.png)
+
 ### RTL
 ### TIMING DIAGRAM
+# Half Adder:
 
+![image](https://user-images.githubusercontent.com/120552008/231431668-da507147-b971-49a8-b562-4e76675eabf4.png)
+
+# Full Adder:
+
+![image](https://user-images.githubusercontent.com/120552008/231431766-37086750-a05b-4aad-a4d2-26aafa7d88d3.png)
+### LOGIC SYMBOL
+
+# Half Adder
+
+![image](https://user-images.githubusercontent.com/120552008/231432486-1bd1b48c-6214-49b0-a438-f6e480b368ac.png)
+
+# Full Adder
+
+![image](https://user-images.githubusercontent.com/120552008/231432519-b7c31dd2-fcc6-4f61-a6a0-bb3a6ca78b02.png)
 
 ### TRUTH TABLE 
+# Half Adder:
+![image](https://user-images.githubusercontent.com/120552008/231432170-a5452a50-16be-419e-8d34-b3f9eed3e9b3.png)
+
+# Full Adder:
+![image](https://user-images.githubusercontent.com/120552008/231432410-b318f2c3-ee7d-4df8-b0e6-a68a150b9af9.png)
+
 
 ### Result:
+Thus the half adder and full adder are studied and the truth table for different logic gates are verified.
+
+
